@@ -1,0 +1,124 @@
+.cadastro-apresentacao {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+  min-width: 0;
+}
+
+.area-cadastro {
+  display: grid;
+  grid-template-columns: minmax(0, 544fr) minmax(0, 624fr);
+  gap: 80px;
+  align-items: start;
+  padding-block: 64px;
+}
+
+.cadastro-painel {
+  min-width: 0;
+}
+
+.formulario, .confirmacao {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 32px;
+  border: 1px solid var(--borda);
+  border-radius: 24px;
+  background: white;
+}
+
+.formulario h2, .confirmacao h2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.legenda {
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--secundario);
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.campo label {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+.campo input, .campo select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 11px 12px;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  color: var(--escuro);
+  background: white;
+  line-height: 24px;
+}
+
+.campo input::placeholder {
+  color: var(--secundario);
+  opacity: 1;
+}
+
+.campo select:has(option[value='']:checked) {
+  color: var(--secundario);
+}
+
+.campo [aria-invalid='true'] {
+  border-color: #991b1b;
+}
+
+.erro-campo {
+  color: #991b1b;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.mensagem {
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.erro {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.sucesso {
+  background: #e1f5e8;
+  color: #14532d;
+}
+
+.icone-sucesso {
+  font-size: 60px;
+  line-height: 66px;
+  font-weight: 700;
+  color: var(--verde);
+}
+
+.contador {
+  margin-top: 16px;
+  color: var(--secundario);
+  font-size: 13px;
+}
+
+@media (max-width: 1100px) {
+  .area-cadastro { gap: 40px; }
+}
+@media (max-width: 760px) {
+  .area-cadastro { grid-template-columns: 1fr; gap: 28px; padding-block: 32px; }
+  .formulario, .confirmacao { padding: 20px; }
+}

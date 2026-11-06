@@ -1,0 +1,29 @@
+.rodape {
+  background: var(--verde);
+  color: white;
+  padding: 48px;
+}
+
+.rodape-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.rodape small {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+@media (max-width: 760px) {
+  .rodape { padding: 24px; }
+}
+
+.marca-rodape {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+}
